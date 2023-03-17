@@ -16,12 +16,29 @@
         android:textSize="30sp" />
 
     <TextView
-        android:id="@+id/encrypted_message"
+        android:id="@+id/encrypted_message_string"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:hint="ОЖИДАЕТ MESSAGE"
+        android:background="@color/white"
         android:paddingTop="30dp"
         android:layout_marginTop="20dp"
         android:textSize="30sp" />
+    <TextView
+        android:id="@+id/encrypted_message_int"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:hint="ОЖИДАЕТ ПЕРЕДАЧУ Int"
+        android:paddingTop="60dp"
+        android:layout_marginTop="20dp"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/look_message_int"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="look message int"/>
 
 
 </LinearLayout>

@@ -14,6 +14,7 @@ class MessageFragment : Fragment() {
     lateinit var nextBtn: Button
     lateinit var editMessageView : EditText
     lateinit var btn : Button
+    lateinit var messageString: String
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -26,16 +27,17 @@ class MessageFragment : Fragment() {
     }
 
     private fun onClick(view: View) {
-        var myMessage = 777
-        val message = editMessageView.text.toString()
-        val action = MessageFragmentDirections
-            .actionMessageFragmentToEncryptFragment(message,myMessage)
+        var messageInt = 777
+        messageString =  editMessageView.text.toString()
 
         nextBtn.setOnClickListener {
-            message                                  //FixMe перестало передовать String первый аргумент
+            val action = MessageFragmentDirections
+                .actionMessageFragmentToEncryptFragment(messageInt,messageString)                                //FixMe перестало передовать String первый аргумент
             view.findNavController().navigate(action)
         }
         btn.setOnClickListener {
+            val action = MessageFragmentDirections
+                .actionMessageFragmentToEncryptFragment(messageInt,messageString)
             view.findNavController().navigate(action)
         }
     }
